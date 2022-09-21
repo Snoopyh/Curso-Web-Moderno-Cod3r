@@ -8,3 +8,4 @@ console.log(num1)
 
 console.log(++num1 === num2--) // fugir desse tipo de padrão
 console.log(num1 === num2)
+
