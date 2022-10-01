@@ -4,7 +4,7 @@ function retornarDinheiro(valor = 0, moeda = "R$" ){
   return resultado
 }
 console.log(retornarDinheiro(8.88))
-// correção das respostas do exercicios
+
 function formaValorDecimal(valorDecimal){
   valorEmReais = `R$ = ${valorDecimal.toFixed(2).toString().replace(".",",")}`
   console.log(valorEmReais)
