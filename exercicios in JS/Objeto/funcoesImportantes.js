@@ -20,9 +20,9 @@ console.log(pessoa.dataNascimento) // congela um do objeto nao o objeto todo
 console.log(Object.keys(pessoa))
 
 // Object.assign ECMAs2015
-const dest = {a:1}
+const dest = {a:1 , b:2}
 const o1 = {b : 2}
-const o2 = {b : 2 , c: 3, a:4}
+const o2 = {b : 7 , c: 3, a:4}
 const obj = Object.assign(dest , o1 ,o2)
 console.log(obj) // concatenar todos os objetos
 
