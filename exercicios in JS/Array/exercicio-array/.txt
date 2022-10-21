@@ -1,0 +1,19 @@
+// Quero que desenvolva a logica de cada exercicio em uma função exclusiva e aparece as informações no terminal
+
+// 1- Total de itens em estoque
+// 2- Total de itens em destaque
+// 3- Total de itens disponveis
+// 4- Total de itens que estaõ disponiveis e em destaque
+// 5- Total do inventario da loja
+// 6- Produto mais caro, o seu valor e de qual departamento ele é
+// 7- Produto mais barato, o seu valor e de qual departamento ele é
+// 8- Produto com maior valor em estoque e qual o valor
+// 9- Produto com menor valor em estoque e qual o valor
+// 10- O valor do ticket médio da loja
+// 11- Total de itens no estoque por departamento
+// 12- O valor total de invetario por departamento
+// 13- O valor do ticket médio por departamento
+// 14- O departamento mais valioso e o valor de seu inventario
+// 15- O departamento menos valioso e o valor de seu inventario
+
+//=============================================================================================================================================
