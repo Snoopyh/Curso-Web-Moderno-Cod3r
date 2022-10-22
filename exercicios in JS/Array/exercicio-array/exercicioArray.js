@@ -1157,6 +1157,77 @@ function valorTicketMedio(array){
   console.log(`Valor Medio Dos Tickets: ${mediaTicket.toFixed(2).toString().replace(",",".")} R$`)
 }
 
+/*// objetos separados por Departamento
+const depAcessorios = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Acessorios')
+const depAdaptadores = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Adaptadores')
+const depCasa = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Casa')
+const depEletronicos = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Eletronicos')
+const depFerramentas = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Ferramentas')
+const depGames = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Games')
+const depInformatica = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Informatica')
+const depMoveis = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Moveis')
+const depTabletsECell = listaProdutos.filter(produto => produto.departamento.nomeDepto == 'Tablets e Celulares')
+*/
+function Departamento(nome){
+  const dep = listaProdutos.filter(produto => produto.departamento.nomeDepto == nome)
+  return dep
+}
+function totalIemEstoquePorDepartamento(array){
+  function qtdEstoque(Departamento , nomeDep){
+    const NomeDep = nomeDep
+    const quantidadeEstoque = Departamento.map(produto => produto.qtdEstoque)
+    .reduce((acumulador , atual) => acumulador + atual)
+    const tamanhoDep = Departamento.length
+    return console.log(`Total de itens no Departamento ${NomeDep} : ${tamanhoDep}
+    e total de produtos em estoque : ${quantidadeEstoque}`)
+  }
+  qtdEstoque(Departamento('Acessorios'),'Acessorios' )
+  qtdEstoque(Departamento('Adaptadores'), 'Adaptadores')
+  qtdEstoque(Departamento('Casa'), 'Casa')
+  qtdEstoque(Departamento('Eletronicos'), 'Eletronicos')
+  qtdEstoque(Departamento('Ferramentas'), 'Ferramentas')
+  qtdEstoque(Departamento('Games'), 'Games')
+  qtdEstoque(Departamento('Informatica'), 'Informatica')
+  qtdEstoque(Departamento('Moveis'), 'Moveis')
+  qtdEstoque(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
+ 
+}
+function inventarioPorDep(array){
+  function valorTotalInventarioPorDepartamento(Departamento , nomeDep ){
+    const nome = nomeDep
+    const MapearPreco = Departamento.map(produto => produto.preco)
+    const valorTotalPorDepartamento = MapearPreco.reduce((acumulador , atual) => acumulador += atual)
+    return console.log(`o valor total do Departamento: ${nome} e de ${valorTotalPorDepartamento.toFixed(2).toString().replace(",",".")} R$`)
+  }
+  valorTotalInventarioPorDepartamento(Departamento('Acessorios'), 'Acessorios')
+  valorTotalInventarioPorDepartamento(Departamento('Adaptadores'), 'Adaptadores')
+  valorTotalInventarioPorDepartamento(Departamento('Casa'), 'Casa')
+  valorTotalInventarioPorDepartamento(Departamento('Eletronicos'), 'Eletronicos')
+  valorTotalInventarioPorDepartamento(Departamento('Ferramentas'), 'Ferramentas')
+  valorTotalInventarioPorDepartamento(Departamento('Games'), 'Games')
+  valorTotalInventarioPorDepartamento(Departamento('Informatica'), 'Informatica')
+  valorTotalInventarioPorDepartamento(Departamento('Moveis'), 'Moveis')
+  valorTotalInventarioPorDepartamento(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
+}
+function valorMedioTicketPorDep(array){
+  function valorMedioTicketPorDepartamento(Departamento , nomeDep){
+    const nome = nomeDep
+    const SomaPorDep = Departamento.map(produto => produto.preco)
+    .reduce((acumulador, atual ) => acumulador + atual)
+    const MediaTicket = SomaPorDep / Departamento.length
+    return console.log(`O ticket Medio Do Departamento ${nome} é de ${MediaTicket.toFixed(2).toString().replace(",",".")} R$`)
+  }
+  valorMedioTicketPorDepartamento(Departamento('Acessorios'), 'Acessorios')
+  valorMedioTicketPorDepartamento(Departamento('Adaptadores'), 'Adaptadores')
+  valorMedioTicketPorDepartamento(Departamento('Casa'), 'Casa')
+  valorMedioTicketPorDepartamento(Departamento('Eletronicos'), 'Eletronicos')
+  valorMedioTicketPorDepartamento(Departamento('Ferramentas'), 'Ferramentas')
+  valorMedioTicketPorDepartamento(Departamento('Games'), 'Games')
+  valorMedioTicketPorDepartamento(Departamento('Informatica'), 'Informatica')
+  valorMedioTicketPorDepartamento(Departamento('Moveis'), 'Moveis')
+  valorMedioTicketPorDepartamento(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
+}
+
 /* Chamada das funçoes */ 
 totalItemEmEstoque(listaProdutos) 
 totalItemEmDestaque(listaProdutos)
@@ -1168,3 +1239,6 @@ produtoMaisBarato(listaProdutos)
 produtoMaiorValorEmEstoque(listaProdutos)
 produtoMenorValorEmEstoque(listaProdutos)
 valorTicketMedio(listaProdutos)
+totalIemEstoquePorDepartamento(listaProdutos)
+inventarioPorDep(listaProdutos)
+valorMedioTicketPorDep(listaProdutos)
