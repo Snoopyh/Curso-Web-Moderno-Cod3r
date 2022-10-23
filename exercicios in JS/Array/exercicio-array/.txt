@@ -1,19 +1,104 @@
 // Quero que desenvolva a logica de cada exercicio em uma função exclusiva e aparece as informações no terminal
 
 // 1- Total de itens em estoque
+
+Quantidade De Produtos Em Estoque : 2568 Produtos
+
 // 2- Total de itens em destaque
+
+Total de itens em Destaque : 59
+
 // 3- Total de itens disponveis
+
+Total de itens Disponiveis : 80
+
 // 4- Total de itens que estaõ disponiveis e em destaque
+
+Total de itens Disponiveis em Destaque : 59
+
 // 5- Total do inventario da loja
+
+Total de Produtos no inventario da Loja : 91
+
 // 6- Produto mais caro, o seu valor e de qual departamento ele é
+
+O Produto Mais Caro é DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO
+  preço: 750,00 Reais
+  Departamento:Informatica
+
 // 7- Produto mais barato, o seu valor e de qual departamento ele é
+
+O Produto Mais Barato da Loja é ADAPTADOR EXTENDER / RJ45 BEGE
+  Preço: 1,00
+  Departamento:Adaptadores
+
 // 8- Produto com maior valor em estoque e qual o valor
+
+Produto com maior valor Disponivel:CONSOLE SONY PS4 SLIM 1TB CUH-2215B PRETO BIVOLT + 3 JOGOS HORIZON ZD/GRAN TURISMO SPORT/RAINBOWSIX
+  valor do produto = 425.00 R$
+
 // 9- Produto com menor valor em estoque e qual o valor
+
+Produto com menor valor Disponivel:ADAPTADOR EXTENDER / RJ45 BEGE
+  valor do produto de MenorValor:
+  1.00 R$
+
 // 10- O valor do ticket médio da loja
+
+Valor Medio Dos Tickets: 89.72 R$
+
 // 11- Total de itens no estoque por departamento
+
+Total de itens no Departamento Acessorios : 27
+    e total de produtos em estoque : 693
+Total de itens no Departamento Adaptadores : 18
+    e total de produtos em estoque : 923
+Total de itens no Departamento Casa : 5
+    e total de produtos em estoque : 21
+Total de itens no Departamento Eletronicos : 9
+    e total de produtos em estoque : 227
+Total de itens no Departamento Ferramentas : 2
+    e total de produtos em estoque : 18
+Total de itens no Departamento Games : 9
+    e total de produtos em estoque : 232
+Total de itens no Departamento Informatica : 7
+    e total de produtos em estoque : 195
+Total de itens no Departamento Moveis : 10
+    e total de produtos em estoque : 182
+Total de itens no Departamento Tablets e Celulares : 4
+    e total de produtos em estoque : 77
+
 // 12- O valor total de invetario por departamento
+
+o valor total do Departamento: Acessorios e de 1298.75 R$
+o valor total do Departamento: Adaptadores e de 153.60 R$
+o valor total do Departamento: Casa e de 222.25 R$
+o valor total do Departamento: Eletronicos e de 966.50 R$
+o valor total do Departamento: Ferramentas e de 21.50 R$
+o valor total do Departamento: Games e de 2327.00 R$
+o valor total do Departamento: Informatica e de 932.25 R$
+o valor total do Departamento: Moveis e de 1790.00 R$
+o valor total do Departamento: Tablets e Celulares e de 452.50 R$
+
 // 13- O valor do ticket médio por departamento
+
+O ticket Medio Do Departamento Acessorios é de 48.10 R$
+O ticket Medio Do Departamento Adaptadores é de 8.53 R$
+O ticket Medio Do Departamento Casa é de 44.45 R$
+O ticket Medio Do Departamento Eletronicos é de 107.39 R$
+O ticket Medio Do Departamento Ferramentas é de 10.75 R$
+O ticket Medio Do Departamento Games é de 258.56 R$
+O ticket Medio Do Departamento Informatica é de 133.18 R$
+O ticket Medio Do Departamento Moveis é de 179.00 R$
+O ticket Medio Do Departamento Tablets e Celulares é de 113.13 R$
+
 // 14- O departamento mais valioso e o valor de seu inventario
+
+o Departamento mais Caro é o Departamento de Games com o valor de: 2327.00 R$
+
 // 15- O departamento menos valioso e o valor de seu inventario
+
+o Departamento mais Barato é o Departamento de Ferramentas com o valor de: 21.50 R$
+
 
 //=============================================================================================================================================

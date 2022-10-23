@@ -1195,8 +1195,8 @@ function totalIemEstoquePorDepartamento(array){
 function inventarioPorDep(array){
   function valorTotalInventarioPorDepartamento(Departamento , nomeDep ){
     const nome = nomeDep
-    const MapearPreco = Departamento.map(produto => produto.preco)
-    const valorTotalPorDepartamento = MapearPreco.reduce((acumulador , atual) => acumulador += atual)
+    const valorTotalPorDepartamento = Departamento.map(produto => produto.preco)
+    .reduce((acumulador , atual) => acumulador += atual)
     return console.log(`o valor total do Departamento: ${nome} e de ${valorTotalPorDepartamento.toFixed(2).toString().replace(",",".")} R$`)
   }
   valorTotalInventarioPorDepartamento(Departamento('Acessorios'), 'Acessorios')
@@ -1208,6 +1208,7 @@ function inventarioPorDep(array){
   valorTotalInventarioPorDepartamento(Departamento('Informatica'), 'Informatica')
   valorTotalInventarioPorDepartamento(Departamento('Moveis'), 'Moveis')
   valorTotalInventarioPorDepartamento(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
+  
 }
 function valorMedioTicketPorDep(array){
   function valorMedioTicketPorDepartamento(Departamento , nomeDep){
@@ -1227,6 +1228,41 @@ function valorMedioTicketPorDep(array){
   valorMedioTicketPorDepartamento(Departamento('Moveis'), 'Moveis')
   valorMedioTicketPorDepartamento(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
 }
+function pegarDepartamentosEValores(array){
+  const resultado = [] 
+ function getDepartamento(Departamento , nomeDep){
+  const nome = nomeDep
+  const pegarDepartamento = Departamento.map(produto => produto.preco)
+  .reduce((acumulador , atual) =>  acumulador += atual )
+  
+  return (resultado.push([pegarDepartamento ,nome] ) )
+ }
+ 
+  getDepartamento(Departamento('Acessorios'), 'Acessorios')
+  getDepartamento(Departamento('Adaptadores'), 'Adaptadores')
+  getDepartamento(Departamento('Casa'), 'Casa')
+  getDepartamento(Departamento('Eletronicos'), 'Eletronicos')
+  getDepartamento(Departamento('Ferramentas'), 'Ferramentas')
+  getDepartamento(Departamento('Games'), 'Games')
+  getDepartamento(Departamento('Informatica'), 'Informatica')
+  getDepartamento(Departamento('Moveis'), 'Moveis')
+  getDepartamento(Departamento('Tablets e Celulares'), 'Tablets e Celulares')
+ const pegarDepMaisValioso = resultado.sort((DepA , DepB)=> (DepB[0] - DepA[0]))
+ return pegarDepMaisValioso
+}
+function DepMaisCaro(array){
+  const DepMaisCaro = array[0]
+  const valorDep = DepMaisCaro[0].toFixed(2).toString().replace(",",".")
+  const nomeDep = DepMaisCaro[1]
+  console.log(` o Departamento mais Caro é o Departamento de ${nomeDep} com o valor de: ${valorDep} R$`)
+}
+function DepMaisBarato(array){
+  array = array.sort((DepA , DepB)=> (DepA[0] - DepB[0]))
+  const DepMaisBarato = array[0]
+  const valorDep = DepMaisBarato[0].toFixed(2).toString().replace(",",".")
+  const nomeDep = DepMaisBarato[1]
+  console.log(`o Departamento mais Barato é o Departamento de ${nomeDep} com o valor de: ${valorDep} R$`)
+}
 
 /* Chamada das funçoes */ 
 totalItemEmEstoque(listaProdutos) 
@@ -1242,3 +1278,6 @@ valorTicketMedio(listaProdutos)
 totalIemEstoquePorDepartamento(listaProdutos)
 inventarioPorDep(listaProdutos)
 valorMedioTicketPorDep(listaProdutos)
+pegarDepartamentosEValores(listaProdutos)
+DepMaisCaro(pegarDepartamentosEValores())
+DepMaisBarato(pegarDepartamentosEValores())
